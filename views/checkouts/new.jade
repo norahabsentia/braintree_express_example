@@ -24,6 +24,8 @@ block content
   script.
     var form = document.querySelector('#payment-form');
     var token = '#{clientToken}';
+   
+   
 
     braintree.dropin.create({
       authorization: token,
@@ -51,3 +53,18 @@ block content
     var checkout = new Demo({
       formID: 'payment-form'
     });
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),sParameterName,i;
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+    }
+    };
+     var amount = getUrlParameter('amount'); 
+      if(amount){
+      console.log(amount);
+      }
