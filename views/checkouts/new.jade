@@ -2,9 +2,9 @@ extends ../layout
 
 block content
   .wrapper: .checkout.container: .content
-    header
-      h1 Hi, #[br] Let's test a transaction
-      p Make a test payment with Braintree using PayPal or a card
+    //- header
+    //-   h1 Hi, #[br] Let's test a transaction
+    //-   p Make a test payment with Braintree using PayPal or a card
 
     form#payment-form(action="/checkouts", method="post")
       section
@@ -18,7 +18,7 @@ block content
 
       input#nonce(type="hidden" name="payment_method_nonce")
       button.button(type="submit")
-        span Test Transaction
+        span Pay Now
 
   script(src="https://js.braintreegateway.com/web/dropin/1.9.0/js/dropin.min.js")
   script.
