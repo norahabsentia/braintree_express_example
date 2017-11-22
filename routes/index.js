@@ -40,7 +40,7 @@ function createResultObject(transaction) {
         result = {
             header: 'Transaction Failed',
             icon: 'fail',
-            message: 'Your test transaction has a status of ' + status + '. See the Braintree API response and try again.'
+            message: 'Your transaction has been failed with status of ' + status + '. Close this window and try again'
         };
     }
 
