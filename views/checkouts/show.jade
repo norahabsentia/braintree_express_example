@@ -20,7 +20,8 @@ block content
   script.
     console.log("Hello Jade")
     setTimeout(function(){
-      window.location.href='uniwebview://success'},3000)
+      console.log("#{result.icon}");
+      window.location.href='uniwebview://#{result.icon}'},3000)
     console.log('Good bye')
 
   //- aside.drawer.dark
