@@ -13,11 +13,17 @@ block content
       section
         p Test another transaction or see the Braintree API response.
 
-    section
-      a.button.primary.back(href="/checkouts/new")
-        span Test Another Transaction
+    //- section
+    //-   a.button.primary.back(href="/checkouts/new")
+    //-     span Test Another Transaction
 
-  aside.drawer.dark
+  script.
+    console.log("Hello Jade")
+    setTimeout(function(){
+      window.location.href='uniwebview://success'},3000)
+    console.log('Good bye')
+
+  //- aside.drawer.dark
     header: .content.compact
       a.braintree(href='https://developers.braintreepayments.com', target='_blank') Braintree
       h3 API Response
